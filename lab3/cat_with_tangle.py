@@ -6,9 +6,11 @@ pygame.init()
 
 FPS = 30
 screen = pygame.display.set_mode((400, 600))
+
 # Фон
 dr.rect(screen, (66, 64, 0), (0, 0, 400, 300))
 dr.rect(screen, (125, 102, 6), (0, 300, 400, 300))
+
 # Окно
 dr.rect(screen, (240, 240, 255), (200, 20, 180, 270))
 dr.rect(screen, (78, 195, 226), (210, 30, 75, 75))
@@ -17,24 +19,28 @@ dr.rect(screen, (78, 195, 226), (210, 115, 75, 165))
 dr.rect(screen, (78, 195, 226), (295, 115, 75, 165))
 
 # Хвост
-# dr.rect(screen, (182, 86, 35), [135, 260, 100, 30], 0, border_radius=400,
-#           border_top_left_radius=0)
 dr.arc(screen, (182, 86, 35), (200 - 150, 300 + 60, 400, 160), pi / 6, pi / 2, width=60)
 dr.arc(screen, (182, 86, 35), (200 + 50, 300 - 15, 400, 160), pi / 6 + pi, pi + pi / 2, width=59)
 dr.arc(screen, 'black', (200 - 150, 300 + 60, 400, 160), pi / 6, pi / 2, width=1)
 dr.arc(screen, 'black', (200 + 50, 300 - 15, 400, 160), pi / 6 + pi, pi + pi / 2, width=1)
 
+# Тело
 dr.ellipse(screen, (182, 86, 35), (50, 330, 266, 130), 0)
 dr.ellipse(screen, (0, 0, 0), (50, 330, 266, 130), 1)
 
+# Бедро
 dr.circle(screen, (182, 86, 35), (265, 424), 45)
 dr.circle(screen, (0, 0, 0), (265, 424), 45, 1)
 
+# Задняя лапка
 dr.ellipse(screen, (182, 86, 35), (286, 437, 30, 75))
 dr.ellipse(screen, (0, 0, 0), (286, 437, 30, 75), 1)
 
+# Передние лапки
 dr.ellipse(screen, (182, 86, 35), (50, 390, 35, 63))
 dr.ellipse(screen, (0, 0, 0), (50, 390, 35, 63), 1)
+dr.ellipse(screen, (182, 86, 35), (87, 436, 73, 40))
+dr.ellipse(screen, (0, 0, 0), (87, 436, 73, 40), 1)
 
 # Голова
 dr.ellipse(screen, (182, 86, 35), (30, 340, 107, 100))
@@ -59,8 +65,7 @@ c = 7
 d = 27
 dr.polygon(screen, ('pink'), ((73 + c, 385 + d), (73 + c + 8, 385 + d), (73 + c + 4, 385 + d + 6)))
 dr.polygon(screen, (0, 0, 0), ((73 + c - 1, 385 + d), (73 + c + 8 + 1, 385 + d), (73 + c + 4, 385 + d + 6)), width=1)
-dr.ellipse(screen, (182, 86, 35), (87, 436, 73, 40))
-dr.ellipse(screen, (0, 0, 0), (87, 436, 73, 40), 1)
+
 
 # Мoрдочка
 dr.line(screen, ('black'), (73 + c + 4, 385 + d + 6), (73 + c + 4, 385 + d + 6 + 8))
